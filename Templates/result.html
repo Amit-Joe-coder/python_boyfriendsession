@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Here Is Your Information...</h2>
+        {% if request.session %}
+        {% for key,value in request.session.items %}
+        <p>{{key}}={{value}}</p>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+
+</html>
